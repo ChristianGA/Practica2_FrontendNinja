@@ -1,0 +1,75 @@
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+}
+.media_article {
+    width: 200px;
+    height: auto;
+    
+}
+.info_article {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+.title_article {
+    a{
+        font-family: 'Roboto';
+        font-size: $font-size-h1;
+        color: $title-text-color;
+        text-decoration: none;
+    }
+}
+.intro_article {
+    font-family: 'Roboto';
+    font-size: $font-size-base;
+    color: $text-color;
+}
+.author_details{
+    display: flex;
+    flex-direction: row;
+}
+.photo_author{
+    border-radius: 50%;
+    width: 50px;
+    height: auto;
+}
+.info_author {
+    display: flex;
+    flex-direction: column;
+}
+.ilikecomment{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.ilike_comments {
+    width: 70px;
+    button{
+        font-family: 'Roboto';
+        font-size: 10px;
+    }
+}
+.number_comments {
+    a{
+        font-family: 'Roboto';
+        font-size: 10px;
+        color: $title-text-color;
+        text-decoration: none;
+    }
+}
+@include if-mobile-landscape{
+    #img-1{
+        background-image: url(../../dist/img/Dunkerque-250px.jpg)
+    }
+}
+@include if-mobile-portrait{
+    #img-1{
+        background-image: url(../../dist/img/Dunkerque-150px.jpg)
+    }
+}
+@include if-tablet-landscape{
+    #img-1{
+        background-image: url(../../dist/img/Dunkerque-300px.jpg)
+    }
+}
