@@ -14,9 +14,11 @@ var uglify = require("gulp-uglify"); //para minificar JS
 var postcss = require("gulp-postcss"); //con esta y autoprefixer: añadir los prefijos que hacen que algunas funcionalidades funcionen en navegadores antiguos
 var autoprefixer = require("autoprefixer");
 var cssnano = require("cssnano"); //para minificar CSS
+var imagemin = require("gulp-imagemin");
+var responsive = require("gulp-responsive");
 
 //definimos la tarea por defecto
-gulp.task("default", ["html", "sass", "js"], function(){
+gulp.task("default", ["img", "html", "sass", "js"], function(){
 	
 	// iniciamos el servidor de desarrollo
 	browserSync.init({

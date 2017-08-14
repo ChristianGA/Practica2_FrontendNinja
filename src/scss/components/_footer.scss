@@ -1,10 +1,17 @@
 .footer {
+    font-family: 'Roboto';
+    font-size: $font-size-small;
+    color: white;
     background-color: #3498db;
     color: white;
-    height: 50px;
+    height: 30px;
     box-sizing: border-box;
     position: absolute;
     text-align: center;
     width: 100%;
+    a{
+        text-decoration: none;
+        color: white;
+    }
     
 }
