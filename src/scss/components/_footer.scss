@@ -2,16 +2,18 @@
     font-family: 'Roboto';
     font-size: $font-size-small;
     color: white;
-    background-color: #3498db;
-    color: white;
-    height: 30px;
-    box-sizing: border-box;
-    position: absolute;
+    background-color: $footer-color;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
     text-align: center;
-    width: 100%;
     a{
         text-decoration: none;
         color: white;
     }
-    
+}
+.goup{
+    padding-bottom: 5px;
 }

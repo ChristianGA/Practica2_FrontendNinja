@@ -91,9 +91,10 @@ gulp.task("img", function(){
     gulp.src("src/img/*")
         .pipe(responsive({ // generamos las versiones responsive
             '*': [
-                { width: 150, rename: { suffix: "-150px"}},
-                { width: 250, rename: { suffix: "-250px"}},
-                { width: 300, rename: { suffix: "-300px"}}
+				{ width: 200, rename: { suffix: "-200px"}},
+				{ width: 250, rename: { suffix: "-250px"}},
+                { width: 300, rename: { suffix: "-300px"}},
+                { width: 350, rename: { suffix: "-350px"}}
             ]
         }))
         .pipe(imagemin()) // optimizamos el peso de las imágenes

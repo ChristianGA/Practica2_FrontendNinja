@@ -15,31 +15,38 @@ $font-size-h5: $font-size-base + 3px;
 $font-size-h6: $font-size-base;
 
 // Base colors
-$color-amazing-39: #F8695B;
-$color-grastur: #17434E;
-$color-darkgrey: #808080;
-$color-lightgrey: #E0E0E0;
-$color-sidonia-orange: #FDAA10;
-$color-less-is-less: #EFF0EA;
-$color-silver: #DBDBDB;
-$color-background: white;
+$color-1: #F8695B;
+$color-2: #AEB6BF;
+$color-3: #85929E;
+$color-4: #808080;
+$color-5: #E0E0E0;
+$color-6: white;
+$color-7: #FDFEFE;
 
 // Main components colors
-$main-text-color: $color-grastur;
-$title-text-color: $color-darkgrey;
-$text-color: $color-lightgrey;
-$links-color: $color-amazing-39;
+$color-background: $color-7;
+$main-text-color: $color-2;
+$title-text-color: $color-4;
+$text-color: $color-5;
+$links-color: $color-1;
+$header-color: $color-2;
+$header-color-efect: $color-3;
+$header-text-color: $color-6;
+$footer-color: $color-2;
+
+// Forms colors
+$form-input-border-color: $color-2;
+$form-input-outline-color: $color-2;
+$form-button-background-color: $color-2;
+$form-button-font-color: $color-5;
+$form-error-background-color: $color-1;
+$form-error-font-color: $color-5;
+
+//Colors Efects
+$photo-shadow-color: $color-4;
 
 // Responsive
-$mobile-portrait-width: 375px;
+$mobile-portrait-width: 414px;
 $mobile-landscape-width: 767px;
 $tablet-portrait-width: $mobile-landscape-width + 1;
 $tablet-landscape-width: 1024px;
-
-// Forms variables
-$form-input-border-color: $color-grastur;
-$form-input-outline-color: $color-grastur;
-$form-button-background-color: $color-grastur;
-$form-button-font-color: $color-less-is-less;
-$form-error-background-color: $color-amazing-39;
-$form-error-font-color: $color-less-is-less;
