@@ -2,4 +2,4 @@ window.$ = window.jQuery = require("jquery"); // Hace jQuery accesible públicam
 
 import PrettyDate from "./PrettyDate";
 import MeGusta from "./MeGusta";
-import SmoothScroll from "./SmoothScroll";
+import SmoothScroll from "./Goup";

@@ -2,6 +2,7 @@
 $main-font-family: 'Zilla Slab', serif;
 $title-font-family: 'Bree Serif', serif;
 $body-font-family: $main-font-family;
+$text-font-family: 'Roboto';
 
 // Font sizes
 $font-size-base: 15px;
@@ -26,6 +27,7 @@ $color-7: #FDFEFE;
 // Main components colors
 $color-background: $color-7;
 $main-text-color: $color-2;
+$main-text-boldcolor: $color-4;
 $title-text-color: $color-4;
 $text-color: $color-5;
 $links-color: $color-1;

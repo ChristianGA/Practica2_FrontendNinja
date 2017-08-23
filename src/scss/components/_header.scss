@@ -11,21 +11,6 @@
     &:hover {
         background: $header-color-efect;
     }
-
-    /*.header1 {
-        display: inline;
-        .web-title {
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: $font-size-large;
-        }
-        #buscador {
-            display: inline-block;
-            width: 100px;
-            padding: 5px;
-            margin: 0;
-    }
-    }*/
 }
 .header1 {
     display: inline;
@@ -34,7 +19,7 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: $font-size-large;
-    padding-right: 10px;
+    padding-left: 50px; 
 }
 #buscador {
     display: inline-block;
@@ -51,6 +36,16 @@
 }
 .category{
     padding:0 5px;
+    a{
+        text-decoration: none;
+        color: $header-text-color;
+    }
+}
+.sign{
+    font-family: 'Roboto';
+    font-size: $font-size-small;
+    text-transform: lowercase;
+    float: right;
     a{
         text-decoration: none;
         color: $header-text-color;

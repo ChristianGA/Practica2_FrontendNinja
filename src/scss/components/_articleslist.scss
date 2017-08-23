@@ -1,11 +1,12 @@
+.articles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .article {
     display: flex;
     flex-wrap: wrap;
 }
-/*.media_article {
-    width: 300px;
-    height: auto;
-}*/
 .info_article {
     display: flex;
     flex-direction: column;
@@ -46,10 +47,7 @@
     padding: 0 10px;
 }
 .ilikecomment{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;    
+    display: flex;    
 }
 .ilike_comments {
     button{
@@ -69,7 +67,112 @@
         text-decoration: none;
     }
 }
+.paginas{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    a{
+        color: $title-text-color;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+    }
+    a.active{
+        background-color: $title-text-color;
+        color: white;
+    }
+    a:hover:not(.active){
+        background-color: $text-color;
+    }
+}
 @include if-mobile{
+    .article{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3.5vh;
+    }
+    .info_article{
+        width: 85vw;
+        padding: 15px 0; 
+    }
+    .media_article{
+        height: 150px;
+    }
+    .intro_article{
+        padding: 10px 0 5px 0;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+    }
+    .author_details{
+        padding: 5px 0;
+    }
+    .ilikecomment{
+        padding: 5px 0;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #img-1{
+        background-image: url(img/Dunkerque-200px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 200px;
+        height: 200px;
+    }
+    #img-2{
+        background-image: url(img/JusticeLeague-200px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 200px;
+        height: 130px;
+    }
+    #img-3{
+        background-image: url(img/Abracadabra-200px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 200px;
+        height: 280px;
+    }
+    #img-4{
+        background-image: url(img/DarkTower-200px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 200px;
+        height: 149px;
+    }
+    #img-5{
+        background-image: url(img/emoji-200px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 200px;
+        height: 290px;
+    }
+    #img-6{
+        background-image: url(img/KingArthur-200px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 200px;
+        height: 295px;
+    }
+    #img-7{
+        background-image: url(img/Spiderman-200px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 200px;
+        height: 290px;
+    }
+    #img-8{
+        background-image: url(img/Transformers-200px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 200px;
+        height: 140px;
+    }
+}
+@include if-mobile-landscape{
     .article{
         flex-direction: column;
         align-items: center;
@@ -88,27 +191,77 @@
     .author_details{
         padding: 5px 0;
     }
+    .details{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
     .ilikecomment{
         padding: 5px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     #img-1{
-        background-image: url(img/Dunkerque-200px.jpg);
+        background-image: url(img/Dunkerque-250px.jpg);
         background-repeat: no-repeat;
         box-shadow: 2px 2px 4px $photo-shadow-color;
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
     }
     #img-2{
-        background-image: url(img/JusticeLeague-200px.jpg);
+        background-image: url(img/JusticeLeague-250px.jpg);
         background-repeat: no-repeat;
         box-shadow: 2px 2px 4px $photo-shadow-color;
-        width: 200px;
-        height: 130px;
+        width: 250px;
+        height: 160px;
+    }
+    #img-3{
+        background-image: url(img/Abracadabra-250px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 250px;
+        height: 350px;
+    }
+    #img-4{
+        background-image: url(img/DarkTower-250px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 250px;
+        height: 185px;
+    }
+    #img-5{
+        background-image: url(img/emoji-250px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 250px;
+        height: 350px;
+    }
+    #img-6{
+        background-image: url(img/KingArthur-250px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 250px;
+        height: 350px;
+    }
+    #img-7{
+        background-image: url(img/Spiderman-250px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 250px;
+        height: 350px;
+    }
+    #img-8{
+        background-image: url(img/Transformers-250px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 250px;
+        height: 180px;
     }
 }
-@include if-mobile-landscape{
+@include if-tablet{
     .article{
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         padding-top: 3.5vh;
     }
@@ -125,37 +278,164 @@
     .author_details{
         padding: 5px 0;
     }
+    .details{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
     .ilikecomment{
         padding: 5px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    #img-1{
-        background-image: url(img/Dunkerque-250px.jpg);
-        background-repeat: no-repeat;
-        box-shadow: 2px 2px 4px $photo-shadow-color;
-        width: 250px;
-        height: 250px;
-    }
-}
-@include if-tablet{
-    #img-1{
-        background-image: url(img/Dunkerque-250px.jpg);
-        background-repeat: no-repeat;
-        width: 250px;
-        height: auto;
-    }
-    .article-1{
-        height: 250px;
-    }
-}
-@include if-desktop{
     #img-1{
         background-image: url(img/Dunkerque-300px.jpg);
         background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
         width: 300px;
-        height: auto;
-    }
-    .article-1{
-        flex-direction: row;
         height: 300px;
+    }
+    #img-2{
+        background-image: url(img/JusticeLeague-300px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 300px;
+        height: 200px;
+    }
+    #img-3{
+        background-image: url(img/Abracadabra-300px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 300px;
+        height: 420px;
+    }
+    #img-4{
+        background-image: url(img/DarkTower-300px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 300px;
+        height: 220px;
+    }
+    #img-5{
+        background-image: url(img/emoji-300px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 300px;
+        height: 420px;
+    }
+    #img-6{
+        background-image: url(img/KingArthur-300px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width:300px;
+        height: 420px;
+    }
+    #img-7{
+        background-image: url(img/Spiderman-300px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 300px;
+        height: 420px;
+    }
+    #img-8{
+        background-image: url(img/Transformers-300px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 300px;
+        height: 215px;
+    }
+}
+@include if-desktop{
+    .articles{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        flex-wrap: wrap;
+    }
+    .article{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3.5vh;
+    }
+    .info_article{
+        width: 400px;
+        padding: 15px 0; 
+    }
+    .media_article{
+        height: 150px;
+    }
+    .intro_article{
+        padding: 10px 0 5px 0;
+    }
+    .author_details{
+        padding: 5px 0;
+    }
+    .details{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .ilikecomment{
+        padding: 5px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #img-1{
+        background-image: url(img/Dunkerque-350px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 350px;
+        height: 350px;
+    }
+    #img-2{
+        background-image: url(img/JusticeLeague-350px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 350px;
+        height: 240px;
+    }
+    #img-3{
+        background-image: url(img/Abracadabra-350px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 350px;
+        height: 420px;
+    }
+    #img-4{
+        background-image: url(img/DarkTower-350px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 350px;
+        height: 260px;
+    }
+    #img-5{
+        background-image: url(img/emoji-350px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 350px;
+        height: 500px;
+    }
+    #img-6{
+        background-image: url(img/KingArthur-350px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width:350px;
+        height: 500px;
+    }
+    #img-7{
+        background-image: url(img/Spiderman-350px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 350px;
+        height: 500px;
+    }
+    #img-8{
+        background-image: url(img/Transformers-350px.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 4px $photo-shadow-color;
+        width: 350px;
+        height: 250px;
     }
 }
