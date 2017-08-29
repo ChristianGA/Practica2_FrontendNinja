@@ -1,6 +1,10 @@
-var dia = document.getElementsByClassName("author_date");
+const $ = require("jquery");
 
-document.write('<div>' + prettyDate(dia) + '</div>');
+$('.author_date_time').each(function(){
+    var d = $(this).html();
+    d = prettyDate(d); 
+    $(this).html(d);
+});
 
 function prettyDate(time) {
     var date = new Date((time || "").replace(/-/g, "/").replace(/[TZ]/g, " ")),

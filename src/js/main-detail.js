@@ -4,6 +4,7 @@ import CommentsService from "./CommentsService";
 import CommentsListManager from "./CommentsListManager";
 import CommentFormManager from "./CommentFormManager";
 import PubSub from "pubsub-js";
+import Goup from "./Goup";
 
 const commentService = new CommentsService("/comments/");
 
