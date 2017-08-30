@@ -67,10 +67,16 @@
         text-decoration: none;
     }
 }
+.paginacion{
+    text-align: center;
+}
 .paginas{
     display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0;
+    margin: 0;
+    li{
+        display: inline;
+    }
     a{
         color: $title-text-color;
         float: left;
@@ -86,6 +92,33 @@
         background-color: $text-color;
     }
 }
+#vid-1{
+	//position: relative;
+	padding-bottom: 56.25%; // 16:9
+	padding-top: 25px;
+    height: 0;
+    /*iframe {
+        //position: absolute;
+        top: 0;
+        //left: 0;
+        width: 100%;
+        height: 100%;
+    }*/
+}
+#vid-2{
+	//position: relative;
+	padding-bottom: 56.25%; // 16:9
+	padding-top: 25px;
+    height: 0;
+    /*iframe {
+        //position: absolute;
+        top: 0;
+        //left: 0;
+        width: 100%;
+        height: 100%;
+    }*/
+}
+    
 @include if-mobile{
     .article{
         flex-direction: column;
