@@ -1,3 +1,5 @@
+const $ = require("jquery");
+
 // Find all YouTube videos
 var $allVideos = $("iframe[src^='//www.youtube.com']"),
 

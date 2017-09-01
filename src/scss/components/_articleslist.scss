@@ -7,6 +7,14 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.button_liked{
+    font-size: $font-size-base;
+    background-color: $form-button-background-color-like;
+    color: $form-button-font-color;
+    font-weight: bold;
+    transition: all 0.25s;
+}
 .info_article {
     display: flex;
     flex-direction: column;
