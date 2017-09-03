@@ -51,7 +51,6 @@ export default class CommentsListManager extends UIManager {
 
     renderComment(comment) {
         return `<article class="comment" data-id="${comment.id}">
-                <div class="title_comment">${comment.title}</div>
                 <div class="author_comment">${comment.author}</div>
                 <div class="email_comment">${comment.email}</div>
                 <div class="text_comment">${comment.text}</div>

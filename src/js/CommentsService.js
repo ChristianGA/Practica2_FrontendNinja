@@ -5,6 +5,7 @@ export default class CommentsService {
     constructor(url) {
         this.url = url;
     }
+    console.log(url);
 
     // Obtener listado de comentarios
     list(successCallback, errorCallback) {

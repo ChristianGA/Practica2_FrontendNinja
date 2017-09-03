@@ -1,22 +1,41 @@
 //https://stackoverflow.com/questions/37538465/save-current-state-after-jquery-click-function
 const $ = require("jquery");
 
-$('#ilike-1').click(function(event){
+$( ".ilike_comments").each(function(index,item) {
+    var target = $(this).find("button");
+    var id = $(this).find("button").attr("id");
+    var item = localStorage.getItem(id);
+    console.log($(this).find("button"));
+    
+    console.log(localStorage.getItem($(this)));
+    
+    if (item==0){
+         target.css("background-color", "#AEB6BF")
+     }else{
+         target.css("background-color", "red")
+     }
+     $(this).find('input').remove().end();
+  });
+
+    $(".ilike_comments").on('click', function(event){
     var target = $(event.target);
-    console.log(target.isLiked);
-    if (target.isLiked){
-        target.css("background-color", "$form-button-background-color")
+    console.log($(this).attr("id"));
+    var id =$(this).attr("id");
+    var active = localStorage.getItem(id);
+
+    console.log(active);
+    if (active==1){
+        target.css("background-color", "#AEB6BF")
+        localStorage.setItem(id, 0);
+        console.log("por cojones ha puesto 0");
     }else{
         target.css("background-color", "red")
+        localStorage.setItem(id, 1);
+        console.log("por cojones ha puesto 1");
     }
-
-    var isLiked = $('#ilike-1').is(":visible"); 
-    sessionStorage.setItem('liked', isLiked); //localStorage - stores data with no expiration date / sessionStorage - stores data for one session (data is lost when the browser tab is closed)
 });
 
-// stored in localStorage as string, `toggle` needs boolean
-var isLiked = sessionStorage.getItem('liked') === 'false' ? false : true;
-$('#ilike-1').toggleClass(isLiked);
+
 
 /*
 //https://toddmotto.com/storing-data-in-the-browser-with-the-html5-local-storage-api/

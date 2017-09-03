@@ -47,10 +47,9 @@ export default class CommentFormManager extends UIManager {
     send() {
         this.setLoading();
         const comment = {
-            title: this.element.find("#title").val(),
             author: this.element.find("#author").val(),
             email: this.element.find("#email").val(),
-            text: this.element.find("#text").val()
+            text: this.element.find("#comment_text").val()
         };
         this.commentsService.save(comment, success => {
             this.pubSub.publish("new-comment", comment); // publicamos el evento que informa de la creación de una canción 
