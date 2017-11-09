@@ -13,10 +13,7 @@ location.hostname == this.hostname
 ) {
 // Figure out element to scroll to
 var target = $(this.hash);
-console.log(target);
 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-console.log(target);
-console.log(target.offset().top);
 // Does a scroll target exist?
 if (target.length) {
   // Only prevent default if animation is actually gonna happen

@@ -31,8 +31,15 @@ export default class CommentFormManager extends UIManager {
     isValid() {
         const inputs = this.element.find("input");
         for (let input of inputs) {
-            if (input.checkValidity() == false) {
+            if (input.checkValidity() == false ) {
                 const errorMessage = input.validationMessage;
+                input.focus();
+                this.setErrorHtml(errorMessage);
+                this.setError();
+                return false;
+            }
+            if ($("input[id=comment_text]").val().split(" ").length > 120){
+                const errorMessage = "Máximo 120 palabras";
                 input.focus();
                 this.setErrorHtml(errorMessage);
                 this.setError();

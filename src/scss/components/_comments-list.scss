@@ -12,7 +12,14 @@
         .ui-status.error { display: block; }
     }
     &.ideal {
-        .ui-status.ideal { display: block; }
+        .ui-status.ideal { 
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1024px;
+         }
     }
 
     &.empty, &.loading, &.error {
@@ -23,29 +30,26 @@
 
     .comment {
         box-sizing: border-box;
-        width: calc(50% - 10px);
+        width: 200px;
         float: left;
-        background: $color-2;
+        background: $color-6;
         padding: 15px;
         margin: 10px 5px;
-        height: 240px;
         max-height: 240px;
         overflow: hidden;
         @include if-mobile-landscape {
             width: calc(25% - 10px);
         }
-        @include if-desktop {
-            width: calc(20% - 10px);
+        .author_comment {
+            margin-top: 5px;
         }
-        .cover {
-            width: 100%;
-        }
-        .artist {
+        .email_comment {
             font-weight: bold;
             margin-top: 10px;
         }
-        .title {
-            margin-top: 5px;
+        .text_comment {
+            width: 100%;
+            margin-top: 10px;
         }
     }
 

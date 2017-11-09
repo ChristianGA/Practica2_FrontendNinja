@@ -15,6 +15,15 @@
     font-weight: bold;
     transition: all 0.25s;
 }
+
+.like-button {
+    &.liked {
+        background-color: $form-button-background-color-like;
+    }
+    &.disliked {
+        background-color: $form-button-background-color;
+    }
+}
 .info_article {
     display: flex;
     flex-direction: column;
